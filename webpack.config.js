@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 
 module.exports = {
-    entry: './websiteScripts/app.js',
+    entry: './websiteScripts/index.js',
     output: {
         // Webpack prefers an absolute path:
         path: path.resolve(__dirname, './bundle'),
