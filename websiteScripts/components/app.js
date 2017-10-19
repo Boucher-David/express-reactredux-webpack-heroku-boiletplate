@@ -1,4 +1,6 @@
-import React from 'react';
+import overallActions from '../combinedActions.js';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
 class App extends React.Component {
 
@@ -14,4 +16,11 @@ class App extends React.Component {
     }
   }
   
-  export default App;
+  const mapDispatchToActions = overallActions;
+  const mapStateToProps = (allState) => allState;
+  const AppContainer = ReactRedux.connect(
+    mapStateToProps,
+    mapDispatchToActions
+  )(App);
+  
+  export default AppContainer;

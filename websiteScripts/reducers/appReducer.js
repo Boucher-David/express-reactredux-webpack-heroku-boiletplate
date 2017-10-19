@@ -1,10 +1,10 @@
 const appReducer = (state = [], action) => {
-    switch(action.type) {
-        case '':
-            return Object.assign({}, state, action.text);
+    switch (action.type) {
+        case 'ADD_TODO':
+          return state;
         default:
-            return state;
-    }
-};
+          return state
+      }
+  };
 
-export default appReducer;
+  export default appReducer;

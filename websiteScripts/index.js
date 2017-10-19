@@ -8,8 +8,8 @@ store.subscribe(() => {
     console.log('Store updated:', store.getState());
 });
 
-const app = require('./components/app.js');
-
+const App = require('./components/app.js');
+console.log(App);
 // remember to add components between provider
 render(
     <Provider store={store}>

@@ -21,7 +21,12 @@ module.exports = {
                 test: /\.css$/,
                 // Apply these loaders if test returns true
                 use: ['style-loader', 'css-loader']
-            }
+            },
+            {
+                    test: /\.jsx?$/,
+                    exclude: /node_modules/,
+                    loader: 'babel-loader',
+                }
         ]
     }
 }
